@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>Live News App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>📰 NewsNow</h1>
+    <nav>
+      <a href="#" onclick="fetchCategory('technology')">Home</a>
+      <a href="#" onclick="showSummaries()">My Summaries</a>
+      <input type="text" id="search" placeholder="Search news..." />
+      <button onclick="searchNews()">Search</button>
+    </nav>
+  </header>
+
+  <!-- Category Buttons -->
+  <section class="categories">
+    <button onclick="fetchCategory('business')">Business</button>
+    <button onclick="fetchCategory('technology')">Tech</button>
+    <button onclick="fetchCategory('sports')">Sports</button>
+    <button onclick="fetchCategory('health')">Health</button>
+  </section>
+
+  <!-- News Articles -->
+  <main id="news-container">
+    <!-- News articles will be dynamically inserted here -->
+  </main>
+
+  <!-- My Summaries Section -->
+  <section id="summaries-section" style="display: none; padding: 1rem 2rem;">
+    <h2>🧠 My Summaries</h2>
+    <button onclick="goBackToNews()" style="margin-bottom: 1rem;">⬅️ Back to News</button>
+    <div id="summary-list"></div>
+  </section>
+
+  <!-- JS Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
